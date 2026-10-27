@@ -1,6 +1,6 @@
 """Fully printable triangular tomato cage: three segmented poles, three rings.
 
-Every part fits a Bambu A1 mini (180 mm cube); the 200 mm bars print diagonally.
+Every part fits a Bambu A1 mini (180 mm cube) in its normal orientation.
 Every part prints without supports. Pole pieces have a socket at each joint end
 and are joined by separate dowels; corner clips snap onto the poles and hold
 square bars that form each ring.
@@ -18,14 +18,14 @@ SEG_LEN = 150        # pole segment length (without peg); pieces stay under 180 
 SPIKE_LEN = 40       # pointed tip on the bottom segment
 
 BAR = 10             # square ring-bar section
-BAR_LEN = 200
+BAR_LEN = 170        # fits straight on a 180 mm bed
 
 CLIP_H = 16          # clip height and arm section
 CLIP_OD = 21
 CLIP_OPENING = 11.5  # snap-on gap, narrower than the pole
 CLIP_GRIP = 0.3      # clip bore smaller than the pole so it clamps in place
 BAR_FIT = 0.2        # snug bar sockets
-SOCKET_START = 14    # socket floor, measured from the pole axis
+SOCKET_START = 29    # socket floor, measured from the pole axis; long arms keep the cage size with short bars
 SOCKET_DEPTH = 16
 ROOF = (BAR + BAR_FIT) / 2  # 45-degree peak over each bar socket, so it prints without a bridge
 ARM_TOP = BAR / 2 + ROOF + 1.6  # arms rise above the collar to cover the peak
