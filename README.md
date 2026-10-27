@@ -17,7 +17,6 @@ All parts fit a Bambu A1 mini (180 × 180 × 180 mm) and print without supports 
 A brim helps the tall, thin pole pieces stay put.
 
 Print files are in `STL/` and `3MF/`. PETG or ASA recommended for outdoor use.
-`stake_connector` is a standalone sleeve for joining two 11 mm garden stakes.
 
 ## Assembly
 
@@ -28,4 +27,4 @@ Print files are in `STL/` and `3MF/`. PETG or ASA recommended for outdoor use.
 
 ## Editing
 
-Dimensions are constants at the top of `src/cage.py`. Rebuild the print files and `STEP/cage.step` with `python src/cage.py` (and `python src/stake_connector.py`), run through cadgen's Python: `uvx --from cadgen==0.7.26 python src/cage.py`.
+Dimensions are constants at the top of `src/cage.py`. Rebuild the print files and `STEP/cage.step` with `python src/cage.py`, run through cadgen's Python: `uvx --from cadgen==0.7.26 python src/cage.py`.
