@@ -1,6 +1,6 @@
 """Fully printable triangular tomato cage: three segmented poles, three rings.
 
-Every part fits a 220 mm print bed. Poles plug together peg-into-socket;
+Every part fits a Bambu A1 mini (180 mm cube); the 200 mm bars print diagonally. Poles plug together peg-into-socket;
 corner clips snap onto the poles and hold square bars that form each ring.
 """
 import math
@@ -12,7 +12,7 @@ POLE_D = 14          # pole diameter
 PEG_D = 8            # pole joint peg
 PEG_LEN = 15
 FIT = 0.4            # print clearance on every fit
-SEG_LEN = 200        # pole segment length (without peg)
+SEG_LEN = 150        # pole segment length (without peg); pieces stay under 180 mm
 SPIKE_LEN = 40       # pointed tip on the bottom segment
 
 BAR = 10             # square ring-bar section
@@ -115,7 +115,7 @@ def cage():
 
     parts = []
     for i, (a, (x, y)) in enumerate(zip(angles, corners)):
-        stack = [spike] + [seg] * 4 + [top]
+        stack = [spike] + [seg] * 6 + [top]
         for k, piece in enumerate(stack):
             p = bd.Pos(x, y, k * SEG_LEN) * piece
             p.label, p.color = f"pole{i + 1}_{piece.label}_{k}", GREEN
